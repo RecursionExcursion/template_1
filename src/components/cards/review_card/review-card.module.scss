@@ -1,0 +1,24 @@
+.review-container {
+  border: 2px solid var(--brown);
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  padding-top: 8rem;
+  text-wrap: wrap;
+  text-align: center;
+  width: 23rem;
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 8rem;
+
+    .reviewer {
+      font-size: 1.5rem;
+    }
+  }
+}

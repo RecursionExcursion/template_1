@@ -1,0 +1,14 @@
+.nav-container{
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.menu-wrapper{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.8rem;
+    line-height: 2rem;
+}

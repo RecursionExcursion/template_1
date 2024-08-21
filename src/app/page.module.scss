@@ -1,0 +1,63 @@
+//  .main {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   min-height: 100vh;
+// }
+
+.landing-view {
+  display: flex;
+  height: 90vh;
+  justify-content: flex-end;
+  padding: 5rem;
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+
+    span {
+      color: var(--white);
+      font-size: 5rem;
+      text-align: start;
+    }
+    button {
+      width: 10rem;
+    }
+  }
+}
+
+.triple-image-display {
+  align-items: center;
+  background-color: var(--sand);
+  color: var(--brown);
+  display: flex;
+  flex-direction: column;
+
+  gap: 5rem;
+  justify-content: center;
+  padding: 0 0 5rem 0;
+}
+
+.four-cards-display {
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  padding: 9rem 11rem 5rem 11rem;
+}
+
+.review-display {
+  background-color: var(--dark-brown);
+  color: var(--sand);
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+  justify-content: center;
+  padding: 0 5rem 4.5rem 5rem;
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+  }
+}

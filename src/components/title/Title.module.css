@@ -1,0 +1,10 @@
+.title-wrapper {
+  font-size: 5rem;
+  padding: 3rem 5rem 2rem 5rem;
+  text-align: start;
+}
+
+.title-container {
+  border-bottom: 2px solid;
+  padding: 1rem 0;
+}

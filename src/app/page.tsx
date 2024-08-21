@@ -1,95 +1,127 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import StickyHeader from "../components/header/sticky_header/StickyHeader";
+import styles from "./page.module.scss";
+import ImageRow from "../components/image_row/ImageRow";
+import VerticalCard from "../components/cards/vertical_card/VerticalCard";
+import Title from "../components/title/Title";
+import ReviewCard from "../components/cards/review_card/ReviewCard";
+import ContactView from "../views/ContactView";
+import Button from "../components/button/Button";
 
 export default function Home() {
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <StickyHeader />
+
+      {/* Landing View */}
+      <div
+        className={styles["landing-view"]}
+        style={{
+          backgroundImage: "url(/foof_poof.JPG)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className={styles["content-container"]}>
+          <span>Foof</span>
+          <span>Poof</span>
+         <Button text="Appreciate" />
         </div>
       </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+      {/* Triple Image Display */}
+      <div className={styles["triple-image-display"]}>
+        <Title
+          title="Come for the foof stay for the poof."
+          textColor="var(--brown)"
+          lineColor="var(--brown)"
+        />
+        <ImageRow
+          height={270}
+          width={400}
+          imageData={[
+            { src: "/foof_poof.JPG", alt: "foof poof" },
+            { src: "/foof_poof.JPG", alt: "foof poof" },
+            { src: "/foof_poof.JPG", alt: "foof poof" },
+          ]}
         />
       </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* 4 Cards */}
+      <div className={styles["four-cards-display"]}>
+        <VerticalCard
+          cardData={{
+            imageData: {
+              src: "/foof_poof.JPG",
+              alt: "foof poof",
+              height: 191,
+              width: 180,
+            },
+            title: "Foof Poof",
+            description: "The best foof poof in town.",
+          }}
+        />
+        <VerticalCard
+          cardData={{
+            imageData: {
+              src: "/foof_poof.JPG",
+              alt: "foof poof",
+              height: 191,
+              width: 180,
+            },
+            title: "Foof Poof",
+            description: "The foofiest poof in town.",
+          }}
+        />
+        <VerticalCard
+          cardData={{
+            imageData: {
+              src: "/foof_poof.JPG",
+              alt: "foof poof",
+              height: 191,
+              width: 180,
+            },
+            title: "Foof Poof",
+            description: "The poofiest foof in town.",
+          }}
+        />
+        <VerticalCard
+          cardData={{
+            imageData: {
+              src: "/foof_poof.JPG",
+              alt: "foof poof",
+              height: 191,
+              width: 180,
+            },
+            title: "Foof Poof",
+            description: "The towniest foof in poof.",
+          }}
+        />
       </div>
+
+      {/* Review */}
+      <div className={styles["review-display"]}>
+        <Title
+          title="What people are saying"
+          textColor="var(--sand)"
+          lineColor="var(--brown)"
+        />
+        <div className={styles["card-container"]}>
+          <ReviewCard
+            review="This is the best foof poof I've ever had."
+            reviewer="Foof Poof Fan"
+          />
+          <ReviewCard
+            review="Morning Roast is my go-to spot for a perfect start to the day. The Honey Lavender Latte is a game-changer!"
+            reviewer="Poof Foof Fan"
+          />
+          <ReviewCard
+            review="I'm never going anywhere else for my foof poof."
+            reviewer="Foof Poof Poof Fan"
+          />
+        </div>
+      </div>
+
+     <ContactView />
     </main>
   );
 }

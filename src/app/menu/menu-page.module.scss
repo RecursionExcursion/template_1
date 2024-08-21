@@ -1,0 +1,15 @@
+.wrapper{
+    background-color: var(--dark-brown);
+    color: var(--white);
+    padding: 5rem;
+    .title{
+        display: flex;
+        flex-direction: column;
+        font-size: 3rem;
+        border-bottom: 1px solid var(--white);
+        width: fit-content;
+    }
+    .menu{
+        
+    }
+}

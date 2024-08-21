@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  .over {
+    color: var(--dark-brown);
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+
+  .under {
+  }
+}
